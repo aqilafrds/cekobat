@@ -200,7 +200,7 @@ export function SearchResults() {
       ) : (
         <ul className="mt-4 grid gap-4 sm:grid-cols-2">
           {results.map(({ product, stats }) => (
-            <li key={product.slug}>
+            <li key={product.slug} className="min-w-0">
               <ProductCard product={product} stats={stats} />
             </li>
           ))}
