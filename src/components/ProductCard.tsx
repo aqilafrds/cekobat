@@ -3,7 +3,7 @@ import { formatRupiah, formatScore } from "@/lib/format";
 import { FORM_LABEL } from "@/lib/labels";
 import type { Product, ReviewStats } from "@/lib/types";
 import { ClassBadge } from "./ClassBadge";
-import { ProductIllustration } from "./ProductIllustration";
+import { ProductImage } from "./ProductImage";
 import { RatingStars } from "./RatingStars";
 
 export function ProductCard({
@@ -18,7 +18,7 @@ export function ProductCard({
       href={`/produk/${product.slug}`}
       className="group flex gap-4 rounded-xl border border-slate-200 bg-white p-4 transition hover:border-teal-600"
     >
-      <ProductIllustration form={product.form} />
+      <ProductImage slug={product.slug} name={product.name} />
       <div className="min-w-0 flex-1">
         <h3 className="font-semibold leading-snug text-slate-900 group-hover:text-teal-700">
           {product.name}
