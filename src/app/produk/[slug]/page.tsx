@@ -7,7 +7,7 @@ import { getProduct, products } from "@/data/products";
 import { ClassBadge } from "@/components/ClassBadge";
 import { InfoIcon, PlusIcon } from "@/components/Icons";
 import { Notice } from "@/components/Notice";
-import { ProductIllustration } from "@/components/ProductIllustration";
+import { ProductImage } from "@/components/ProductImage";
 import { ProductRating } from "@/components/ProductRating";
 import { ReviewSection } from "@/components/ReviewSection";
 import { formatPriceRange } from "@/lib/format";
@@ -124,7 +124,11 @@ async function ProductContent({
       </nav>
 
       <header className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-start">
-        <ProductIllustration form={product.form} className="h-32 w-32" />
+        <ProductImage
+          slug={product.slug}
+          name={product.name}
+          className="h-40 w-32 sm:h-48 sm:w-40"
+        />
         <div className="min-w-0 flex-1">
           <ClassBadge classification={product.classification} />
           <h1 className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
