@@ -10,13 +10,13 @@ permissions:
   contents: write
 
 jobs:
-  fix-artwork:
+  extract-artwork:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Extract WebP asset and switch to img rendering
+      - name: Extract WebP asset
         shell: bash
         run: |
           python3 - <<'PY'
@@ -24,8 +24,7 @@ jobs:
           import base64
           import re
 
-          component_path = Path("src/components/ProductImage.tsx")
-          source = component_path.read_text(encoding="utf-8")
+          source = Path("src/components/ProductImage.tsx").read_text(encoding="utf-8")
           match = re.search(r'const SPRITE = "data:image/webp;base64,([A-Za-z0-9+/=]+)";', source)
           if not match:
               raise SystemExit("Inline product sprite was not found")
@@ -36,62 +35,10 @@ jobs:
           if raw[:4] != b"RIFF" or raw[8:12] != b"WEBP":
               raise SystemExit("Decoded sprite is not a valid WebP container")
 
-          out_dir = Path("public/product-images")
-          out_dir.mkdir(parents=True, exist_ok=True)
-          (out_dir / "catalog.webp").write_bytes(raw)
-
-          component = r'''/* eslint-disable @next/next/no-img-element */
-const PRODUCT_INDEX: Record<string, number> = {
-  "minyak-kayu-putih-60-ml": 0,
-  "paracetamol-500-mg-tablet": 1,
-  "paracetamol-sirup-120-mg": 2,
-  "obat-batuk-hitam-sirup": 3,
-  "antasida-tablet-kunyah": 4,
-  "obat-flu-kombinasi-tablet": 5,
-  "oralit-serbuk": 6,
-  "klorfeniramin-maleat-ctm-4-mg": 7,
-  "vitamin-c-500-mg": 8,
-  "multivitamin-sirup-anak": 9,
-  "povidon-iodin-10-larutan": 10,
-  "tetes-mata-tetrahidrozolin": 11,
-  "amoxicillin-500-mg-kapsul": 12,
-};
-
-export function ProductImage({
-  slug,
-  name,
-  className = "h-24 w-20",
-}: {
-  slug: string;
-  name: string;
-  className?: string;
-}) {
-  const index = PRODUCT_INDEX[slug] ?? 0;
-
-  return (
-    <span
-      role="img"
-      aria-label={`Ilustrasi kemasan ${name}`}
-      data-product-image={slug}
-      className={`relative inline-flex shrink-0 overflow-hidden rounded-2xl border border-slate-100 bg-white ${className}`}
-    >
-      <img
-        src="/product-images/catalog.webp"
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-y-0 h-full max-w-none"
-        style={{
-          width: "1300%",
-          maxWidth: "none",
-          left: `${-index * 100}%`,
-        }}
-      />
-    </span>
-  );
-}
-'''
-          component_path.write_text(component, encoding="utf-8")
-          print(f"Wrote {len(raw)} bytes to public/product-images/catalog.webp")
+          out = Path("public/product-images/catalog.webp")
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_bytes(raw)
+          print(f"Wrote {len(raw)} bytes to {out}")
           PY
 
       - name: Verify generated asset
@@ -99,13 +46,12 @@ export function ProductImage({
         run: |
           test -s public/product-images/catalog.webp
           file public/product-images/catalog.webp
-          grep -q 'src="/product-images/catalog.webp"' src/components/ProductImage.tsx
 
-      - name: Commit fix
+      - name: Commit asset
         shell: bash
         run: |
           git config user.name "aqilafrds"
           git config user.email "aqilafaradisa22@gmail.com"
-          git add public/product-images/catalog.webp src/components/ProductImage.tsx
-          git commit -m "fix: serve product artwork as WebP asset"
+          git add public/product-images/catalog.webp
+          git commit -m "fix: add product artwork WebP asset"
           git push origin HEAD:main
