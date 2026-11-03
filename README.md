@@ -34,7 +34,7 @@ Saat ini aplikasi belum memakai backend. Data demo berada di source code, sedang
 Persyaratan: **Node.js 20.9+** dan npm.
 
 ```bash
-npm ci
+npm install
 npm run dev
 ```
 
