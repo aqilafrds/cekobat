@@ -4,6 +4,10 @@ CekObat adalah prototipe aplikasi berbasis Next.js untuk mencari informasi produ
 
 > **Catatan penting:** data produk, produsen, harga, dan review di repository ini adalah **data contoh/fiktif** untuk keperluan prototipe. Jangan gunakan isi aplikasi sebagai pengganti informasi resmi pada kemasan, BPOM, apoteker, atau tenaga kesehatan.
 
+## Akses website
+
+Website CekObat dapat diakses melalui **[cekobat.vercel.app](https://cekobat.vercel.app)**.
+
 ## Fitur
 
 - Pencarian produk berdasarkan nama, zat aktif, kategori, dan kata kunci.
