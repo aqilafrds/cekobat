@@ -25,7 +25,7 @@ import type {
 import { CameraIcon, XIcon } from "./Icons";
 import { Notice } from "./Notice";
 import { PhotoTile } from "./PhotoTile";
-import { ProductIllustration } from "./ProductIllustration";
+import { ProductImage } from "./ProductImage";
 
 const inputClass =
   "w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-teal-600";
@@ -174,7 +174,7 @@ export function ReviewForm({ initialSlug = "" }: { initialSlug?: string }) {
         </select>
         {product && (
           <div className="flex items-center gap-3 rounded-xl bg-slate-50 p-3">
-            <ProductIllustration form={product.form} className="h-14 w-14" />
+            <ProductImage slug={product.slug} name={product.name} className="size-14" sizes="56px" />
             <div>
               <p className="text-sm font-semibold text-slate-900">{product.name}</p>
               <p className="text-xs text-slate-500">{product.genericName}</p>

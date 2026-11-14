@@ -127,7 +127,8 @@ async function ProductContent({
         <ProductImage
           slug={product.slug}
           name={product.name}
-          className="h-40 w-32 sm:h-48 sm:w-40"
+          className="size-40 sm:size-48"
+          sizes="(min-width: 640px) 192px, 160px"
         />
         <div className="min-w-0 flex-1">
           <ClassBadge classification={product.classification} />
