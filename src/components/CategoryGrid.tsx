@@ -4,13 +4,13 @@ import type { CSSProperties } from "react";
 const PALETTES = [
   ["#fff0e9", "#f0dcd0", "#925137"],
   ["#edf4fc", "#d8e5f4", "#3d648e"],
-  ["#f2edfa", "#e2d9f0", "#735397"],
-  ["#fceef2", "#efdce3", "#91536d"],
-  ["#fff6df", "#ecdfbd", "#806122"],
+  ["#eaf7ef", "#d3e9dc", "#306851"],
+  ["#fff0e6", "#efd9c8", "#8b5131"],
+  ["#fef2e6", "#eedbc9", "#795537"],
   ["#ecf6f3", "#d7e8e1", "#366d5d"],
-  ["#edf2fd", "#dbe3f5", "#4f6391"],
+  ["#edf5fb", "#d6e6f2", "#385f81"],
   ["#f0f4e7", "#dee6cf", "#5c7038"],
-  ["#f2f0f7", "#e1dce9", "#66567c"],
+  ["#eef6fb", "#d8e7ef", "#345d75"],
 ];
 import { categories } from "@/data/categories";
 import { CategoryIcon } from "./Icons";

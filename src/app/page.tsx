@@ -12,20 +12,20 @@ export default function HomePage() {
   return (
     <>
       <section aria-labelledby="hero-title" className="hero-surface relative isolate">
-        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-4 pt-10 sm:px-6 sm:pt-14 lg:py-20">
-          <div className="hero-copy lg:max-w-[56%]">
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-4 pt-8 sm:px-6 sm:pt-10 lg:py-16">
+          <div className="hero-copy mx-auto max-w-[600px] text-center">
             <span className="hero-kicker mb-5 inline-flex items-center gap-2"><span aria-hidden="true">✦</span> Ruang informasi &amp; pengalaman obat</span>
-            <h1 id="hero-title" className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
+            <h1 id="hero-title" className="mx-auto max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
               {SITE.tagline}
             </h1>
-            <p className="mt-4 max-w-lg leading-relaxed text-slate-600">
+            <p className="mx-auto mt-4 max-w-lg leading-relaxed text-slate-600">
               Cari obat, lihat review dan foto dari pengguna lain, lalu bagikan
               pengalaman Anda untuk membantu orang lain.
             </p>
-            <div className="hero-search mt-7 max-w-xl text-left">
+            <div className="hero-search mx-auto mt-7 max-w-xl text-left">
               <SearchBar />
             </div>
-            <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-slate-600">
+            <p className="mt-4 flex flex-wrap items-center justify-center gap-2 text-sm text-slate-600">
               <span>Sering dicari:</span>
               {POPULAR_QUERIES.map((q) => (
                 <Link
@@ -37,18 +37,18 @@ export default function HomePage() {
                 </Link>
               ))}
             </p>
-            <p className="mt-5 max-w-lg text-xs leading-relaxed text-slate-600">{SITE.sampleNotice}</p>
+            <p className="mx-auto mt-5 max-w-lg text-xs leading-relaxed text-slate-600">{SITE.sampleNotice}</p>
           </div>
         </div>
-        <div aria-hidden="true" className="pointer-events-none relative mx-auto h-52 w-full overflow-hidden sm:h-64 lg:absolute lg:inset-0 lg:-z-10 lg:h-full">
+        <div aria-hidden="true" className="pointer-events-none relative mx-auto aspect-[3/1] w-full overflow-hidden lg:absolute lg:inset-0 lg:-z-10 lg:h-full lg:aspect-auto">
           <Image
-            src="/images/hero/cekobat-pastel-3d.webp"
+            src="/images/hero/cekobat-mint-blue-peach.webp"
             alt=""
             fill
             priority
             unoptimized
             sizes="100vw"
-            className="object-cover object-right lg:object-center"
+            className="object-fill"
           />
         </div>
       </section>
