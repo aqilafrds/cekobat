@@ -73,3 +73,63 @@ body {
 @media (min-width: 1024px) {
  .hero-copy { border-radius: 28px; padding: 24px; background: #fffcf8ed; box-shadow: 0 12px 40px #7353970a; }
 }
+
+/* Site-wide pastel atmosphere. Decoration stays behind content and cannot intercept input. */
+body {
+  position: relative;
+  isolation: isolate;
+  background: #faf7fc;
+}
+.page-decoration {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 0% 22%, #f9d9cb99 0%, transparent 45%),
+    radial-gradient(ellipse at 100% 38%, #d9dcfaad 0%, transparent 44%),
+    radial-gradient(ellipse at 5% 95%, #d7eafbb3 0%, transparent 42%),
+    linear-gradient(135deg, #fff8f2, #f7f3fc 55%, #f0f7fd);
+}
+.edge-orbit {
+  position: absolute;
+  width: 330px;
+  height: 500px;
+  border: 30px solid #dbc9f13d;
+  border-radius: 48%;
+  box-shadow: 0 0 0 18px #ffffff52, 0 0 0 42px #b9d9ef26;
+}
+.edge-orbit-left {
+  left: -240px;
+  top: 12%;
+  transform: rotate(-28deg);
+}
+.edge-orbit-right {
+  right: -245px;
+  bottom: 3%;
+  transform: rotate(30deg);
+  border-color: #f1bea63b;
+  box-shadow: 0 0 0 18px #ffffff66, 0 0 0 42px #cbb7ef30;
+}
+.edge-dots {
+  position: absolute;
+  width: 65px;
+  height: 125px;
+  background-image: radial-gradient(circle, #8f8bbb55 1.7px, transparent 2px);
+  background-size: 16px 16px;
+  mask-image: linear-gradient(transparent, black 25%, black 75%, transparent);
+}
+.edge-dots-left { left: 22px; bottom: 13%; }
+.edge-dots-right { right: 22px; top: 18%; }
+@media (max-width: 1100px) {
+  .edge-orbit { opacity: .55; }
+  .edge-dots { opacity: .45; width: 32px; }
+  .edge-dots-left { left: 4px; }
+  .edge-dots-right { right: 4px; }
+}
+@media (max-width: 639px) {
+  .edge-orbit-left { left: -290px; }
+  .edge-orbit-right { right: -295px; }
+  .edge-dots { display: none; }
+}
