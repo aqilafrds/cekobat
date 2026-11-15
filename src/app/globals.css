@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfbf8;
+  --background: #f6fcf9;
   --foreground: #0f172a;
   color-scheme: light;
 }
@@ -76,11 +76,10 @@ body {
   box-shadow: 0 14px 42px #1d545719;
 }
 
-/* Site-wide pastel atmosphere. Decoration stays behind content and cannot intercept input. */
+/* Echo the hero's mint glass, blue lens, and peach accents at the page edges. */
 body {
   position: relative;
   isolation: isolate;
-  background: #f8fbfa;
 }
 .page-decoration {
   position: fixed;
@@ -89,49 +88,61 @@ body {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 0% 22%, #f9d9cb99 0%, transparent 45%),
-    radial-gradient(ellipse at 100% 38%, #cbe3f8ad 0%, transparent 44%),
-    radial-gradient(ellipse at 5% 95%, #d7eafbb3 0%, transparent 42%),
-    linear-gradient(135deg, #fff8f2, #f1faf5 55%, #f0f7fd);
+    radial-gradient(ellipse at 0% 13%, #bdebd8 0%, transparent 38%),
+    radial-gradient(ellipse at 100% 22%, #c9eafa 0%, transparent 41%),
+    radial-gradient(ellipse at 100% 100%, #fce0cf 0%, transparent 38%),
+    radial-gradient(ellipse at 0% 95%, #dcf3e8 0%, transparent 45%),
+    linear-gradient(180deg, #eef9f0, #fbfefd 60%, #f4fafb);
 }
 .edge-orbit {
   position: absolute;
-  width: 330px;
-  height: 500px;
-  border: 30px solid #a4d6c53d;
+  width: 320px;
+  height: 420px;
+  border: 16px solid #ffffff91;
   border-radius: 48%;
-  box-shadow: 0 0 0 18px #ffffff52, 0 0 0 42px #b9d9ef26;
+  box-shadow: 0 0 0 1px #ffffffbf, inset 0 0 0 1px #ffffffb3,
+    inset 0 0 36px var(--glass-glow), 0 14px 42px var(--glass-glow);
 }
 .edge-orbit-left {
-  left: -240px;
-  top: 12%;
-  transform: rotate(-28deg);
+  --glass-glow: #52b79a40;
+  left: -236px;
+  top: 18%;
+  transform: rotate(-24deg);
+  background: linear-gradient(160deg, #e7fff380, #67c8ac36);
 }
 .edge-orbit-right {
-  right: -245px;
-  bottom: 3%;
-  transform: rotate(30deg);
-  border-color: #f1bea63b;
-  box-shadow: 0 0 0 18px #ffffff66, 0 0 0 42px #a6d1ec45;
+  --glass-glow: #4b9dc63b;
+  right: -229px;
+  bottom: 9%;
+  transform: rotate(26deg);
+  background: linear-gradient(160deg, #e3f8ff9c, #82c6e54d 58%, #ffd3b97a);
 }
-.edge-dots {
+.edge-bubbles {
   position: absolute;
-  width: 65px;
-  height: 125px;
-  background-image: radial-gradient(circle, #5c8b9d55 1.7px, transparent 2px);
-  background-size: 16px 16px;
-  mask-image: linear-gradient(transparent, black 25%, black 75%, transparent);
+  width: 76px;
+  height: 108px;
 }
-.edge-dots-left { left: 22px; bottom: 13%; }
-.edge-dots-right { right: 22px; top: 18%; }
-@media (max-width: 1100px) {
-  .edge-orbit { opacity: .55; }
-  .edge-dots { opacity: .45; width: 32px; }
-  .edge-dots-left { left: 4px; }
-  .edge-dots-right { right: 4px; }
+.edge-bubbles::before,
+.edge-bubbles::after {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1;
+  border: 1px solid #ffffffbf;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 23%, #fff 0%, #ffffff68 11%, transparent 40%),
+    radial-gradient(circle at 68% 76%, var(--bubble-tint), transparent 72%);
+  box-shadow: inset 0 -3px 8px var(--bubble-tint), 0 5px 10px #194f6015;
+}
+.edge-bubbles::before { width: 44px; left: 2px; bottom: 5px; }
+.edge-bubbles::after { width: 23px; right: 5px; top: 2px; }
+.edge-bubbles-left { --bubble-tint: #63bfa95c; left: 22px; bottom: 15%; }
+.edge-bubbles-right { --bubble-tint: #68badd66; right: 22px; top: 18%; }
+@media (max-width: 1160px) {
+  .edge-orbit { opacity: .45; }
+  .edge-orbit-left { left: -283px; }
+  .edge-orbit-right { right: -283px; }
+  .edge-bubbles { display: none; }
 }
 @media (max-width: 639px) {
-  .edge-orbit-left { left: -290px; }
-  .edge-orbit-right { right: -295px; }
-  .edge-dots { display: none; }
+  .edge-orbit { display: none; }
 }

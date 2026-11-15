@@ -25,8 +25,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="page-decoration" aria-hidden="true">
           <span className="edge-orbit edge-orbit-left" />
           <span className="edge-orbit edge-orbit-right" />
-          <span className="edge-dots edge-dots-left" />
-          <span className="edge-dots edge-dots-right" />
+          <span className="edge-bubbles edge-bubbles-left" />
+          <span className="edge-bubbles edge-bubbles-right" />
         </div>
         <a
           href="#konten"
