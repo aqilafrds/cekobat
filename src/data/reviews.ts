@@ -110,13 +110,6 @@ const rows: Record<string, Row[]> = {
     ["Tika", "dewasa", 5, 4, "tidak-ada", 5, "sekali", "Aroma khas yang menenangkan", "Aromanya menenangkan, saya teteskan sedikit ke tisu saat hidung tersumbat.", [], true, 4, "2026-09-01"],
     ["Rio", "dewasa", 4, 4, "tidak-ada", 4, "rutin", "Wajib dibawa bepergian", "Botol 60 mL pas untuk dibawa bepergian. Pereda masuk angin versi saya.", ["kemasan-praktis"], true, 3, "2026-08-17"],
   ],
-  "amoxicillin-500-mg-kapsul": [
-    ["Rama", "dewasa", 4, 4, "ringan", 4, "4-7-hari", "Diresepkan dokter untuk radang tenggorokan", "Dokter meresepkan setelah pemeriksaan. Setelah 2 hari tenggorokan mulai membaik, dan obat saya habiskan sesuai anjuran dokter.", ["mudah-ditelan"], true, 29, "2026-10-28", ["sample:strip"]],
-    ["Nadia", "dewasa", 3, 4, "sedang", 3, "4-7-hari", "Diare di hari ketiga", "Infeksinya membaik, tapi saya diare selama pengobatan. Dokter menyarankan banyak minum dan makan teratur; setelah selesai, diarenya juga hilang.", [], true, 14, "2026-10-11"],
-    ["Rizky", "dewasa", 1, 1, "berat", 2, "sekali", "Alergi, harus dihentikan", "Muncul ruam gatal setelah dosis kedua. Saya langsung menghubungi dokter dan obat diganti. Penting memberi tahu dokter riwayat alergi.", [], false, 41, "2026-09-27"],
-    ["Pak Edi", "lansia", 4, 4, "ringan", 4, "4-7-hari", "Infeksi gigi mereda", "Dokter gigi meresepkan setelah gigi saya bengkak. Bengkak mengempis dalam beberapa hari. Obat dihabiskan sesuai resep.", [], true, 15, "2026-09-15"],
-    ["Fani", "dewasa", 5, 5, "tidak-ada", 4, "4-7-hari", "Ingat: hanya dengan resep", "Obat bekerja baik untuk saya, tapi ingat ini obat keras: hanya dengan resep dan dihabiskan sesuai anjuran supaya tidak terjadi resistensi.", [], true, 33, "2026-08-30"],
-  ],
 };
 
 export const seedReviews: Review[] = Object.entries(rows).flatMap(

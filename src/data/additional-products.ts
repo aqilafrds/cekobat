@@ -3,6 +3,265 @@ import type { Product } from "@/lib/types";
 /** Generic demonstration entries. Not registered SKUs; all prices are examples. */
 export const additionalProducts: Product[] = [
   {
+    "slug": "dequalinium-025-mg",
+    "name": "Dequalinium 0,25 mg Tablet Hisap",
+    "genericName": "Dekualinium klorida",
+    "manufacturer": "Kemasan demonstrasi — bukan produsen nyata",
+    "categorySlug": "mulut-tenggorokan",
+    "form": "tablet-hisap",
+    "strength": "0,25 mg",
+    "classification": "bebas",
+    "indications": "Antiseptik lokal untuk infeksi tertentu di rongga mulut dan tenggorokan.",
+    "usageNote": "Biarkan tablet larut perlahan di mulut. Jangan dikunyah atau ditelan utuh. Ikuti batas usia dan aturan pada label.",
+    "warnings": "Hindari bila alergi terhadap kandungannya. Bila sakit tenggorokan memburuk, menetap, atau disertai sulit menelan, periksakan diri.",
+    "commonSideEffects": [
+      "Reaksi hipersensitivitas (frekuensi tidak diketahui)"
+    ],
+    "storage": "Simpan sesuai petunjuk pada kemasan asli. Jauhkan dari jangkauan anak-anak.",
+    "priceRange": {
+      "min": 7000,
+      "max": 24000,
+      "unit": "per strip"
+    },
+    "targetUsers": [
+      "dewasa"
+    ],
+    "keywords": [
+      "dequalinium",
+      "dekualinium",
+      "tablet hisap",
+      "sakit tenggorokan"
+    ],
+    "imageKind": "ai",
+    "sources": [
+      {
+        "title": "BPOM — label tablet hisap dekualinium",
+        "url": "https://registrasiobat.pom.go.id/files/assesment-reports/01776759166.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "attapulgit-pektin-tablet",
+    "name": "Attapulgit 650 mg + Pektin 50 mg",
+    "genericName": "Attapulgit koloidal + pektin",
+    "manufacturer": "Kemasan demonstrasi — bukan produsen nyata",
+    "categorySlug": "pencernaan",
+    "form": "tablet",
+    "strength": "650 mg + 50 mg",
+    "classification": "bebas",
+    "indications": "Membantu memperbaiki konsistensi tinja pada diare.",
+    "usageNote": "Ikuti petunjuk kemasan. Gunakan oralit untuk mengganti cairan dan elektrolit yang hilang.",
+    "warnings": "Segera periksa bila tinja berdarah, demam tinggi, atau timbul tanda dehidrasi. Tanyakan ke apoteker sebelum memakainya bersama obat oral lain.",
+    "commonSideEffects": [
+      "Sembelit"
+    ],
+    "storage": "Simpan sesuai petunjuk pada kemasan asli. Jauhkan dari jangkauan anak-anak.",
+    "priceRange": {
+      "min": 7000,
+      "max": 18000,
+      "unit": "per strip"
+    },
+    "targetUsers": [
+      "dewasa"
+    ],
+    "keywords": [
+      "attapulgite",
+      "atapulgit",
+      "pektin",
+      "diare",
+      "mencret"
+    ],
+    "imageKind": "ai",
+    "sources": [
+      {
+        "title": "Kalbe Consumer Health — informasi tablet attapulgit dan pektin",
+        "url": "https://www.kalbeconsumerhealth.com/id/id/brands/pencernaan-dan-kesehatan-kulit/entrostop"
+      },
+      {
+        "title": "Kementerian Kesehatan — penanganan diare",
+        "url": "https://keslan.kemkes.go.id/view_artikel/4105/mari-mengenal-obat-diare"
+      }
+    ]
+  },
+  {
+    "slug": "dimenhidrinat-50-mg",
+    "name": "Dimenhidrinat 50 mg Tablet",
+    "genericName": "Dimenhidrinat",
+    "manufacturer": "Kemasan demonstrasi — bukan produsen nyata",
+    "categorySlug": "pencernaan",
+    "form": "tablet",
+    "strength": "50 mg",
+    "classification": "bebas-terbatas",
+    "indications": "Membantu mencegah atau meredakan mual, muntah, dan pusing karena mabuk perjalanan.",
+    "usageNote": "Periksa golongan dan batas usia di label. Ikuti petunjuk resmi mengenai waktu penggunaan sebelum perjalanan.",
+    "warnings": "Dapat menyebabkan kantuk. Hindari alkohol, mengemudi, dan mengoperasikan mesin setelah menggunakannya. Tanyakan kepada apoteker bila memakai obat penenang atau memiliki glaukoma atau gangguan berkemih. Golongan di sini merujuk contoh tablet bebas terbatas; produk lain dapat berbeda.",
+    "commonSideEffects": [
+      "Mengantuk",
+      "Mulut kering",
+      "Pusing"
+    ],
+    "storage": "Simpan sesuai petunjuk pada kemasan asli. Jauhkan dari jangkauan anak-anak.",
+    "priceRange": {
+      "min": 5000,
+      "max": 16000,
+      "unit": "per strip"
+    },
+    "targetUsers": [
+      "dewasa"
+    ],
+    "keywords": [
+      "dimenhydrinate",
+      "mabuk perjalanan",
+      "mual perjalanan",
+      "motion sickness"
+    ],
+    "imageKind": "ai",
+    "sources": [
+      {
+        "title": "Phapros — informasi sediaan tablet dimenhidrinat",
+        "url": "https://www.phapros.co.id/cfind/source/files/investor/investor-memo/investor%20memo%20fy%202022.pdf"
+      },
+      {
+        "title": "MedlinePlus — penggunaan dan peringatan dimenhidrinat",
+        "url": "https://medlineplus.gov/druginfo/meds/a607046.html"
+      }
+    ]
+  },
+  {
+    "slug": "guaifenesin-100-mg",
+    "name": "Guaifenesin 100 mg Tablet",
+    "genericName": "Guaifenesin (gliseril guaiakolat)",
+    "manufacturer": "Kemasan demonstrasi — bukan produsen nyata",
+    "categorySlug": "batuk-flu",
+    "form": "tablet",
+    "strength": "100 mg",
+    "classification": "bebas-terbatas",
+    "indications": "Membantu mengencerkan dahak agar lebih mudah dikeluarkan saat batuk berdahak.",
+    "usageNote": "Gunakan sesuai petunjuk pada kemasan sediaan 100 mg.",
+    "warnings": "Periksa zat aktif obat batuk lain untuk menghindari pemakaian ganda. Periksakan batuk yang menetap atau disertai demam atau sesak napas.",
+    "commonSideEffects": [
+      "Mual",
+      "Muntah",
+      "Sakit kepala"
+    ],
+    "storage": "Simpan sesuai petunjuk pada kemasan asli. Jauhkan dari jangkauan anak-anak.",
+    "priceRange": {
+      "min": 4000,
+      "max": 15000,
+      "unit": "per strip"
+    },
+    "targetUsers": [
+      "dewasa"
+    ],
+    "keywords": [
+      "guaiphenesin",
+      "gliseril guaiakolat",
+      "gg",
+      "batuk berdahak",
+      "dahak"
+    ],
+    "imageKind": "ai",
+    "sources": [
+      {
+        "title": "BPOM — daftar sediaan, guaifenesin 100 mg",
+        "url": "https://standarobat.pom.go.id/sisobat/storage/standard/44-keputusan-kepala-badan-pom-nomor-595-tahun-2025-tentang-perubahan-kedua-pilot-project-elabeling.pdf"
+      },
+      {
+        "title": "MedlinePlus — informasi guaifenesin",
+        "url": "https://medlineplus.gov/druginfo/meds/a682494.html"
+      }
+    ]
+  },
+  {
+    "slug": "povidon-iodin-kumur-1-persen",
+    "name": "Povidon Iodin 1% Obat Kumur",
+    "genericName": "Povidon iodin",
+    "manufacturer": "Kemasan demonstrasi — bukan produsen nyata",
+    "categorySlug": "mulut-tenggorokan",
+    "form": "obat-kumur",
+    "strength": "1%",
+    "classification": "bebas-terbatas",
+    "indications": "Antiseptik untuk keluhan tertentu di mulut dan tenggorokan sesuai indikasi produk.",
+    "usageNote": "Gunakan sediaan khusus obat kumur sesuai petunjuk label. Buang larutan setelah berkumur.",
+    "warnings": "Jangan ditelan. Hindari bila alergi terhadap povidon iodin. Konsultasikan terlebih dahulu bila memiliki gangguan tiroid, memakai litium, hamil, atau menyusui.",
+    "commonSideEffects": [
+      "Iritasi pada mulut",
+      "Reaksi alergi (jarang)"
+    ],
+    "storage": "Simpan sesuai petunjuk pada kemasan asli. Jauhkan dari jangkauan anak-anak.",
+    "priceRange": {
+      "min": 18000,
+      "max": 45000,
+      "unit": "per botol"
+    },
+    "targetUsers": [
+      "dewasa"
+    ],
+    "keywords": [
+      "povidone iodine",
+      "obat kumur",
+      "gargle",
+      "sariawan",
+      "sakit tenggorokan"
+    ],
+    "imageKind": "ai",
+    "sources": [
+      {
+        "title": "Betadine Indonesia — informasi povidon iodin 1% untuk berkumur",
+        "url": "https://id.betadine.global/id/id/product-category/product/cold-and-flu/betadine--mouthwash---gargle"
+      },
+      {
+        "title": "Mundipharma — lembar informasi obat kumur povidon iodin 1%",
+        "url": "https://ae.betadine.global/docs/default-source/prescribing-information-label/betadine-mouthwash-gargle-pil.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "asam-folat-1-mg",
+    "name": "Asam Folat 1 mg Tablet",
+    "genericName": "Asam folat (vitamin B9)",
+    "manufacturer": "Kemasan demonstrasi — bukan produsen nyata",
+    "categorySlug": "vitamin-suplemen",
+    "form": "tablet",
+    "strength": "1 mg",
+    "classification": "bebas",
+    "indications": "Asam folat membantu memenuhi kebutuhan folat. Folat diperlukan untuk pembentukan sel dan materi genetik.",
+    "usageNote": "Tanyakan kepada apoteker atau dokter apakah kekuatan 1 mg sesuai untuk kebutuhan Anda. Ikuti label atau anjuran tenaga kesehatan.",
+    "warnings": "Jangan mengobati anemia sendiri. Asam folat dapat menutupi tanda kekurangan vitamin B12. Konsultasikan bila memakai obat antikejang atau metotreksat.",
+    "commonSideEffects": [
+      "Reaksi alergi (jarang)"
+    ],
+    "storage": "Simpan sesuai petunjuk pada kemasan asli. Jauhkan dari jangkauan anak-anak.",
+    "priceRange": {
+      "min": 5000,
+      "max": 28000,
+      "unit": "per strip"
+    },
+    "targetUsers": [
+      "dewasa"
+    ],
+    "keywords": [
+      "folic acid",
+      "folat",
+      "vitamin b9"
+    ],
+    "imageKind": "ai",
+    "sources": [
+      {
+        "title": "BPOM — daftar sediaan, asam folat 1 mg",
+        "url": "https://standarobat.pom.go.id/sisobat/storage/standard/44-keputusan-kepala-badan-pom-nomor-595-tahun-2025-tentang-perubahan-kedua-pilot-project-elabeling.pdf"
+      },
+      {
+        "title": "NIH — informasi folat",
+        "url": "https://ods.od.nih.gov/factsheets/Folate-Consumer/"
+      },
+      {
+        "title": "DailyMed — informasi tablet asam folat 1 mg",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b050122-73e9-48c7-9b26-431eaadddcfe"
+      }
+    ]
+  },
+  {
     "slug": "ibuprofen-200-mg",
     "name": "Ibuprofen 200 mg Tablet",
     "genericName": "Ibuprofen",
@@ -640,47 +899,6 @@ export const additionalProducts: Product[] = [
       {
         "title": "Rujukan informasi bahan / sediaan",
         "url": "https://www.nccih.nih.gov/health/ginger"
-      }
-    ]
-  },
-  {
-    "slug": "omeprazol-20-mg",
-    "name": "Omeprazol 20 mg Kapsul",
-    "genericName": "Omeprazol",
-    "manufacturer": "Kemasan demonstrasi — bukan produsen nyata",
-    "categorySlug": "obat-resep",
-    "form": "kapsul",
-    "strength": "20 mg",
-    "classification": "keras",
-    "indications": "Menurunkan produksi asam lambung pada kondisi tertentu sesuai diagnosis dokter.",
-    "usageNote": "Gunakan sesuai resep dan lama terapi yang ditentukan dokter. Sediaan lepas tunda tidak boleh dihancurkan sembarangan.",
-    "warnings": "Obat keras: hanya dengan resep dokter. Jangan digunakan untuk menutupi keluhan berulang tanpa pemeriksaan. Segera cari pertolongan bila muntah darah, BAB hitam, sulit menelan, atau berat badan turun tanpa sebab. Beri tahu dokter semua obat yang digunakan.",
-    "commonSideEffects": [
-      "Sakit kepala",
-      "Nyeri perut",
-      "Mual",
-      "Diare"
-    ],
-    "storage": "Ikuti suhu dan petunjuk penyimpanan pada label. Simpan tertutup, terlindung dari panas dan cahaya, jauh dari jangkauan anak. Untuk sediaan yang dibuka, ikuti batas waktu penggunaan pada kemasan.",
-    "priceRange": {
-      "min": 10000,
-      "max": 35000,
-      "unit": "per strip sesuai resep (harga contoh)"
-    },
-    "targetUsers": [
-      "dewasa"
-    ],
-    "keywords": [
-      "asam lambung",
-      "gerd",
-      "omeprazole",
-      "resep"
-    ],
-    "imageKind": "ai",
-    "sources": [
-      {
-        "title": "Rujukan informasi bahan / sediaan",
-        "url": "https://www.nhs.uk/medicines/omeprazole/"
       }
     ]
   }

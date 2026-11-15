@@ -12,12 +12,6 @@ function Dot({ classification }: { classification: Classification }) {
       return <span className={`${base} bg-green-600`} aria-hidden="true" />;
     case "bebas-terbatas":
       return <span className={`${base} bg-blue-600`} aria-hidden="true" />;
-    case "keras":
-      return (
-        <span className={`${base} bg-red-600`} aria-hidden="true">
-          K
-        </span>
-      );
     case "tradisional":
       return <span className={`${base} bg-emerald-800`} aria-hidden="true" />;
   }

@@ -192,13 +192,7 @@ async function ProductContent({
             <Fact label="Zat aktif">{product.genericName}</Fact>
             <Fact label="Kekuatan">{product.strength}</Fact>
             <Fact label="Bentuk sediaan">{FORM_LABEL[product.form]}</Fact>
-            <Fact label="Golongan">
-              {product.classification === "keras" ? (
-                <>Obat Keras · {CLASSIFICATION_HINT.keras}</>
-              ) : (
-                CLASSIFICATION_HINT[product.classification]
-              )}
-            </Fact>
+            <Fact label="Golongan">{CLASSIFICATION_HINT[product.classification]}</Fact>
             <Fact label="Produsen">{product.manufacturer}</Fact>
             <Fact label={product.imageKind === "ai" ? "Kisaran harga contoh" : "Kisaran harga"}>{formatPriceRange(product.priceRange)}</Fact>
             <Fact label="Umumnya untuk">

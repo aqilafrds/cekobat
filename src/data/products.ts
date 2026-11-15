@@ -258,27 +258,6 @@ export const products: Product[] = [
     targetUsers: ["dewasa", "anak", "lansia"],
     keywords: ["pegal", "masuk angin", "kembung", "gigitan nyamuk", "hangat", "jamu"],
   },
-  {
-    slug: "amoxicillin-500-mg-kapsul",
-    name: "Amoxicillin 500 mg Kapsul",
-    genericName: "Amoksisilin",
-    manufacturer: MAKER,
-    categorySlug: "obat-resep",
-    form: "kapsul",
-    strength: "500 mg",
-    classification: "keras",
-    indications:
-      "Antibiotik untuk infeksi bakteri tertentu. Hanya digunakan atas resep dan anjuran dokter.",
-    usageNote:
-      "Diminum sesuai resep dan dihabiskan sesuai lama pengobatan yang ditetapkan dokter.",
-    warnings:
-      "Obat keras: hanya dengan resep dokter. Jangan membeli atau memakai tanpa resep dan jangan menghentikan sendiri sebelum waktunya. Jangan dipakai bila alergi penisilin. Segera cari bantuan medis bila muncul ruam luas, bengkak pada wajah, atau sesak napas.",
-    commonSideEffects: ["Diare", "Mual", "Ruam kulit"],
-    storage: STORAGE_DRY,
-    priceRange: { min: 15000, max: 45000, unit: "per strip (sesuai resep)" },
-    targetUsers: ["dewasa", "lansia"],
-    keywords: ["antibiotik", "infeksi", "radang tenggorokan", "bakteri", "resep"],
-  },
   ...additionalProducts,
 ];
 

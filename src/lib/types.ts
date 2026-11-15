@@ -1,7 +1,9 @@
-export type Classification = "bebas" | "bebas-terbatas" | "keras" | "tradisional" | "suplemen";
+export type Classification = "bebas" | "bebas-terbatas" | "tradisional" | "suplemen";
 
 export type DosageForm =
   | "tablet"
+  | "tablet-hisap"
+  | "obat-kumur"
   | "kapsul"
   | "sirup"
   | "krim"

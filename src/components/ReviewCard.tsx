@@ -51,6 +51,10 @@ export function ReviewCard({
         </Link>
       )}
 
+      {showProduct && !product && (
+        <p className="mb-3 text-sm text-slate-600">Produk ini sudah keluar dari katalog.</p>
+      )}
+
       <header className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
         <span aria-hidden="true" className="review-avatar flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold">{review.nickname.slice(0, 1).toUpperCase()}</span>
         <span className="font-medium text-slate-900">{review.nickname}</span>

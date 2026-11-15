@@ -50,9 +50,9 @@ export const categories: Category[] = [
     icon: "leaf",
   },
   {
-    slug: "obat-resep",
-    name: "Obat Resep",
-    description: "Obat keras yang diberikan dengan resep dokter",
+    slug: "mulut-tenggorokan",
+    name: "Mulut & Tenggorokan",
+    description: "Tablet hisap dan obat kumur untuk keluhan mulut dan tenggorokan",
     icon: "pill",
   },
 ];

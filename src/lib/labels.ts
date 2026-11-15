@@ -11,7 +11,6 @@ export const CLASSIFICATION_LABEL: Record<Classification, string> = {
   suplemen: "Suplemen Kesehatan",
   bebas: "Obat Bebas",
   "bebas-terbatas": "Obat Bebas Terbatas",
-  keras: "Obat Keras",
   tradisional: "Obat Tradisional",
 };
 
@@ -19,12 +18,13 @@ export const CLASSIFICATION_HINT: Record<Classification, string> = {
   suplemen: "Bukan pengganti makanan bergizi atau terapi dokter",
   bebas: "Dapat dibeli tanpa resep",
   "bebas-terbatas": "Dapat dibeli tanpa resep, perhatikan peringatan di kemasan",
-  keras: "Hanya dengan resep dokter",
   tradisional: "Jamu/herbal, tidak termasuk golongan obat modern",
 };
 
 export const FORM_LABEL: Record<DosageForm, string> = {
   tablet: "Tablet",
+  "tablet-hisap": "Tablet Hisap",
+  "obat-kumur": "Obat Kumur",
   kapsul: "Kapsul",
   sirup: "Sirup",
   krim: "Krim",
