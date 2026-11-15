@@ -41,7 +41,7 @@ export function ReviewCard({
   const reported = reportedIds.includes(review.id);
 
   return (
-    <article className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4 sm:p-5">
+    <article className="review-card flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
       {product && (
         <Link
           href={`/produk/${product.slug}`}
@@ -52,6 +52,7 @@ export function ReviewCard({
       )}
 
       <header className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+        <span aria-hidden="true" className="review-avatar flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold">{review.nickname.slice(0, 1).toUpperCase()}</span>
         <span className="font-medium text-slate-900">{review.nickname}</span>
         <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-600">
           {WHO_FOR_LABEL[review.whoFor]}

@@ -16,7 +16,7 @@ export function ProductCard({
   return (
     <Link
       href={`/produk/${product.slug}`}
-      className="group flex min-w-0 w-full gap-4 rounded-xl border border-slate-200 bg-white p-4 transition hover:border-teal-600"
+      className="product-card group flex min-w-0 w-full gap-4 rounded-2xl border border-slate-200/80 bg-white p-4 transition hover:border-teal-600 sm:p-5"
     >
       <ProductImage slug={product.slug} name={product.name} />
       <div className="min-w-0 flex-1">

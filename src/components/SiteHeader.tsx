@@ -7,13 +7,13 @@ const navLink =
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <header className="site-header sticky top-0 z-40 border-b border-slate-200/70 bg-white/95 backdrop-blur-xl">
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
           href="/"
           className="flex items-center gap-2 text-lg font-semibold tracking-tight"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-700 text-white">
+          <span className="brand-mark flex h-9 w-9 items-center justify-center rounded-xl text-white">
             <PillIcon size={18} />
           </span>
           {SITE.name}
@@ -30,7 +30,7 @@ export function SiteHeader() {
           </Link>
           <Link
             href="/tulis-review"
-            className="ml-1 inline-flex items-center gap-1.5 rounded-lg bg-teal-700 px-3.5 py-2 font-medium text-white transition hover:bg-teal-800"
+            className="ml-1 inline-flex items-center gap-1.5 rounded-full bg-teal-700 px-4 py-2.5 font-medium text-white transition hover:bg-teal-800"
           >
             <PlusIcon size={16} />
             Tulis review

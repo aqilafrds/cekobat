@@ -34,12 +34,14 @@ export function HomeSections() {
         aria-labelledby="judul-tren"
         className="mx-auto w-full max-w-5xl px-4 pt-12 sm:px-6"
       >
+        <div className="review-band">
         <div className="mb-5">
-          <h2 id="judul-tren" className="text-xl font-semibold tracking-tight">
+          <p className="eyebrow mb-2">Sudut pengalaman</p>
+          <h2 id="judul-tren" className="text-2xl font-semibold tracking-tight">
             Review tren
           </h2>
           <p className="mt-1 text-sm text-slate-600">
-            Review yang paling membantu dan baru-baru ini dibaca banyak orang.
+            Temukan cerita dan sudut pandang pengguna. Setiap pengalaman bisa berbeda.
           </p>
         </div>
         <ReviewReadingGate>
@@ -51,6 +53,7 @@ export function HomeSections() {
           ))}
         </ul>
         </ReviewReadingGate>
+        </div>
       </section>
 
       <section
@@ -59,7 +62,8 @@ export function HomeSections() {
       >
         <div className="mb-5 flex items-end justify-between gap-4">
           <div>
-            <h2 id="judul-populer" className="text-xl font-semibold tracking-tight">
+            <p className="eyebrow mb-2">Jelajahi katalog</p>
+            <h2 id="judul-populer" className="text-2xl font-semibold tracking-tight">
               Produk populer
             </h2>
             <p className="mt-1 text-sm text-slate-600">
@@ -68,7 +72,7 @@ export function HomeSections() {
           </div>
           <Link
             href="/cari"
-            className="shrink-0 text-sm font-medium text-teal-700 hover:underline"
+            className="shrink-0 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-teal-700 transition hover:border-teal-600"
           >
             Lihat semua
           </Link>

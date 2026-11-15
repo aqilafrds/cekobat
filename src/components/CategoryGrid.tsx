@@ -1,20 +1,34 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
+
+const PALETTES = [
+  ["#fff0e9", "#f0dcd0", "#925137"],
+  ["#edf4fc", "#d8e5f4", "#3d648e"],
+  ["#f2edfa", "#e2d9f0", "#735397"],
+  ["#fceef2", "#efdce3", "#91536d"],
+  ["#fff6df", "#ecdfbd", "#806122"],
+  ["#ecf6f3", "#d7e8e1", "#366d5d"],
+  ["#edf2fd", "#dbe3f5", "#4f6391"],
+  ["#f0f4e7", "#dee6cf", "#5c7038"],
+  ["#f2f0f7", "#e1dce9", "#66567c"],
+];
 import { categories } from "@/data/categories";
 import { CategoryIcon } from "./Icons";
 
 export function CategoryGrid() {
   return (
     <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-      {categories.map((c) => (
+      {categories.map((c, index) => (
         <li
           key={c.slug}
           className="max-sm:[&:last-child:nth-child(odd)]:col-span-2"
         >
           <Link
             href={`/cari?kategori=${c.slug}`}
-            className="flex h-full items-center gap-3 rounded-xl border border-slate-200 bg-white p-3.5 transition hover:border-teal-600 hover:bg-teal-50/40"
+            style={{ "--card-tint": PALETTES[index][0], "--card-border": PALETTES[index][1], "--card-ink": PALETTES[index][2] } as CSSProperties}
+            className="category-card flex h-full items-center gap-3 rounded-2xl border p-4 sm:p-5"
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-700">
+            <span className="category-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl">
               <CategoryIcon name={c.icon} size={20} />
             </span>
             <span className="min-w-0">
@@ -25,6 +39,7 @@ export function CategoryGrid() {
                 {c.description}
               </span>
             </span>
+            <span aria-hidden="true" className="category-arrow ml-auto hidden text-lg sm:block">↗</span>
           </Link>
         </li>
       ))}

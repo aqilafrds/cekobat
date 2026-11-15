@@ -3,11 +3,12 @@ import { SITE } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-16 border-t border-slate-200 bg-slate-50">
-      <div className="mx-auto w-full max-w-5xl space-y-4 px-4 py-8 text-sm text-slate-600 sm:px-6">
+    <footer className="site-footer mt-16">
+      <div className="mx-auto w-full max-w-5xl space-y-5 px-4 py-10 text-sm text-slate-300 sm:px-6">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/15 pb-5"><span className="text-xl font-semibold tracking-tight text-white">CekObat<span className="text-amber-200">.</span></span><span className="text-xs text-slate-300">Kenali obat. Pahami pengalaman.</span></div>
         <nav
           aria-label="Tautan footer"
-          className="flex flex-wrap gap-x-6 gap-y-2 font-medium text-slate-700"
+          className="flex flex-wrap gap-x-6 gap-y-2 font-medium text-slate-100"
         >
           <Link href="/cari" className="hover:text-teal-700">
             Cari obat
@@ -20,7 +21,7 @@ export function SiteFooter() {
           </Link>
         </nav>
         <p>{SITE.medicalDisclaimer}</p>
-        <p className="text-slate-500">
+        <p className="text-xs leading-relaxed text-slate-400">
           {SITE.sampleNotice} &copy; {SITE.owner} · {SITE.name}
         </p>
       </div>

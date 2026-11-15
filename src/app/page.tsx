@@ -11,17 +11,18 @@ const POPULAR_QUERIES = ["demam", "batuk", "maag", "alergi", "luka", "diare"];
 export default function HomePage() {
   return (
     <>
-      <section aria-labelledby="hero-title" className="relative isolate bg-white">
+      <section aria-labelledby="hero-title" className="hero-surface relative isolate">
         <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-4 pt-10 sm:px-6 sm:pt-14 lg:py-20">
           <div className="lg:max-w-[56%]">
-            <h1 id="hero-title" className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
+            <span className="hero-kicker mb-5 inline-flex items-center gap-2"><span aria-hidden="true">✦</span> Ruang informasi &amp; pengalaman obat</span>
+            <h1 id="hero-title" className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
               {SITE.tagline}
             </h1>
             <p className="mt-4 max-w-lg leading-relaxed text-slate-600">
               Cari obat, lihat review dan foto dari pengguna lain, lalu bagikan
               pengalaman Anda untuk membantu orang lain.
             </p>
-            <div className="mt-7 max-w-xl text-left">
+            <div className="hero-search mt-7 max-w-xl text-left">
               <SearchBar />
             </div>
             <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-slate-600">
@@ -30,7 +31,7 @@ export default function HomePage() {
                 <Link
                   key={q}
                   href={`/cari?q=${q}`}
-                  className="inline-flex min-h-11 items-center rounded-full border border-slate-200 bg-white/95 px-3 py-1 transition hover:border-teal-600 hover:text-teal-700"
+                  className="keyword-chip inline-flex min-h-11 items-center rounded-full border border-slate-200 bg-white/95 px-3 py-1 transition hover:border-teal-600 hover:text-teal-700"
                 >
                   {q}
                 </Link>
@@ -54,28 +55,31 @@ export default function HomePage() {
 
       <section
         aria-labelledby="judul-kategori"
-        className="mx-auto w-full max-w-5xl px-4 pt-4 sm:px-6"
+        className="mx-auto w-full max-w-5xl px-4 pt-10 sm:px-6 sm:pt-14"
       >
-        <h2 id="judul-kategori" className="mb-5 text-xl font-semibold tracking-tight">
+        <p className="eyebrow mb-2">Mulai dari kebutuhan Anda</p>
+        <h2 id="judul-kategori" className="mb-2 text-2xl font-semibold tracking-tight">
           Telusuri kategori
         </h2>
+        <p className="mb-6 text-sm text-slate-600">Jelajahi informasi obat melalui sembilan kategori.</p>
         <CategoryGrid />
       </section>
 
       <HomeSections />
 
       <section className="mx-auto w-full max-w-5xl px-4 pt-12 sm:px-6">
-        <div className="flex flex-col items-start gap-4 rounded-2xl bg-teal-700 p-6 text-white sm:flex-row sm:items-center sm:justify-between sm:p-8">
+        <div className="review-cta flex flex-col items-start gap-6 rounded-3xl p-7 text-white sm:flex-row sm:items-center sm:justify-between sm:p-10">
           <div>
-            <h2 className="text-lg font-semibold">Punya pengalaman dengan suatu obat?</h2>
-            <p className="mt-1 text-sm text-teal-50">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-amber-200">Cerita Anda berarti</p>
+            <h2 className="text-xl font-semibold">Punya pengalaman dengan suatu obat?</h2>
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-slate-200">
               Ceritakan khasiat, efek samping, dan kesesuaian harganya untuk
               membantu pengguna lain.
             </p>
           </div>
           <Link
             href="/tulis-review"
-            className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-white px-4 py-2.5 text-sm font-medium text-teal-800 transition hover:bg-teal-50"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-amber-100 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-200"
           >
             <PlusIcon size={16} />
             Tulis review
