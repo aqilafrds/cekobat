@@ -7,6 +7,7 @@ import { computeStats, groupByProduct, pickTrending } from "@/lib/reviews";
 import { useAllReviews } from "@/lib/use-all-reviews";
 import { ProductCard } from "./ProductCard";
 import { ReviewCard } from "./ReviewCard";
+import { ReviewReadingGate } from "./ReviewReadingGate";
 
 export function HomeSections() {
   const reviews = useAllReviews();
@@ -41,6 +42,7 @@ export function HomeSections() {
             Review yang paling membantu dan baru-baru ini dibaca banyak orang.
           </p>
         </div>
+        <ReviewReadingGate>
         <ul className="grid gap-4 md:grid-cols-3">
           {trending.map((r) => (
             <li key={r.id}>
@@ -48,6 +50,7 @@ export function HomeSections() {
             </li>
           ))}
         </ul>
+        </ReviewReadingGate>
       </section>
 
       <section

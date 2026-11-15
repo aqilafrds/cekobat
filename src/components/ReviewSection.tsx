@@ -20,6 +20,7 @@ import { PlusIcon } from "./Icons";
 import { PhotoGrid } from "./PhotoGrid";
 import { RatingSummary } from "./RatingSummary";
 import { ReviewCard } from "./ReviewCard";
+import { ReviewReadingGate } from "./ReviewReadingGate";
 
 const PAGE_SIZE = 5;
 const MAX_GALLERY = 12;
@@ -81,6 +82,7 @@ export function ReviewSection({ product }: { product: Product }) {
         </Link>
       </div>
 
+      <ReviewReadingGate>
       {stats.count === 0 ? (
         <EmptyState
           title="Belum ada review untuk obat ini"
@@ -203,6 +205,7 @@ export function ReviewSection({ product }: { product: Product }) {
           )}
         </>
       )}
+      </ReviewReadingGate>
     </section>
   );
 }

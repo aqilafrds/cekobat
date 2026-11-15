@@ -4,6 +4,7 @@ import Link from "next/link";
 import { deleteLocalReview, useLocalReviews } from "@/lib/storage";
 import { EmptyState } from "./EmptyState";
 import { ReviewCard } from "./ReviewCard";
+import { ReviewReadingGate } from "./ReviewReadingGate";
 
 export function MyReviews() {
   const reviews = useLocalReviews();
@@ -25,6 +26,7 @@ export function MyReviews() {
   }
 
   return (
+    <ReviewReadingGate>
     <ul className="space-y-4">
       {reviews.map((r) => (
         <li key={r.id}>
@@ -40,5 +42,6 @@ export function MyReviews() {
         </li>
       ))}
     </ul>
+    </ReviewReadingGate>
   );
 }
