@@ -75,10 +75,10 @@ export function SearchBar({
         }}
         className="flex items-center gap-2"
       >
-        <div className="relative flex-1">
+        <div className="relative min-w-0 flex-1">
           <SearchIcon
             size={size === "lg" ? 22 : 18}
-            className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
+            className="pointer-events-none absolute left-3 top-1/2 sm:left-4 -translate-y-1/2 text-slate-400"
           />
           <input
             type="search"
@@ -101,12 +101,12 @@ export function SearchBar({
             }}
             onFocus={() => setOpen(true)}
             onKeyDown={onKeyDown}
-            className={`w-full rounded-xl border border-slate-300 bg-white pl-12 pr-4 text-slate-900 placeholder:text-slate-400 focus:border-teal-600 ${height}`}
+            className={`w-full rounded-xl border border-slate-300 bg-white pl-10 pr-2 text-slate-900 sm:pl-12 sm:pr-4 placeholder:text-slate-400 focus:border-teal-600 ${height}`}
           />
         </div>
         <button
           type="submit"
-          className={`shrink-0 rounded-xl bg-teal-700 px-5 font-medium text-white transition hover:bg-teal-800 ${height}`}
+          className={`shrink-0 rounded-xl bg-teal-700 px-3.5 font-medium sm:px-5 text-white transition hover:bg-teal-800 ${height}`}
         >
           Cari
         </button>

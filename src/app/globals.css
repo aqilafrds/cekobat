@@ -76,6 +76,20 @@ body {
   box-shadow: 0 14px 42px #1d545719;
 }
 
+@media (width < 1200px) {
+  .hero-surface {
+    background: linear-gradient(155deg, #d3f2e3, #f4faf7 58%, #edf8fc);
+  }
+
+  .hero-layout {
+    padding-top: clamp(72px, 22vw, 168px);
+  }
+
+  .hero-art {
+    mask-image: linear-gradient(to bottom, #000 78%, transparent);
+  }
+}
+
 /* Echo the hero's mint glass, blue lens, and peach accents at the page edges. */
 body {
   position: relative;

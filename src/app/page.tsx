@@ -12,35 +12,35 @@ export default function HomePage() {
   return (
     <>
       <section aria-labelledby="hero-title" className="hero-surface relative isolate min-[1200px]:grid min-[1200px]:min-h-[clamp(400px,33.333vw,560px)] min-[1200px]:items-center">
-        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-4 pt-8 sm:px-6 sm:pt-10 min-[1200px]:py-4">
+        <div className="hero-layout relative z-10 mx-auto w-full max-w-5xl px-3 pb-5 sm:px-6 min-[1200px]:py-4">
           <div className="hero-copy mx-auto max-w-[600px] text-center min-[1200px]:p-5!">
             <span className="hero-kicker mb-3 inline-flex items-center gap-2"><span aria-hidden="true">✦</span> Ruang informasi &amp; pengalaman obat</span>
-            <h1 id="hero-title" className="mx-auto max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[38px]">
+            <h1 id="hero-title" className="mx-auto max-w-xl text-[clamp(24px,6.5vw,30px)] font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[38px]">
               {SITE.tagline}
             </h1>
-            <p className="mx-auto mt-3 max-w-lg leading-relaxed text-slate-600">
+            <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-slate-600 sm:text-base">
               Cari obat, lihat review dan foto dari pengguna lain, lalu bagikan
               pengalaman Anda untuk membantu orang lain.
             </p>
             <div className="hero-search mx-auto mt-4 max-w-xl text-left">
               <SearchBar />
             </div>
-            <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-sm text-slate-600">
-              <span>Sering dicari:</span>
+            <div className="mt-3 grid grid-cols-3 items-center gap-2 text-sm text-slate-600 sm:flex sm:flex-wrap sm:justify-center">
+              <span className="col-span-3">Sering dicari:</span>
               {POPULAR_QUERIES.map((q) => (
                 <Link
                   key={q}
                   href={`/cari?q=${q}`}
-                  className="keyword-chip inline-flex min-h-11 items-center rounded-full border border-slate-200 bg-white/95 px-3 py-1 transition hover:border-teal-600 hover:text-teal-700"
+                  className="keyword-chip inline-flex min-h-11 items-center justify-center rounded-full border border-slate-200 bg-white/95 px-3 py-1 transition hover:border-teal-600 hover:text-teal-700"
                 >
                   {q}
                 </Link>
               ))}
-            </p>
+            </div>
             <p className="mx-auto mt-3 max-w-lg text-xs leading-relaxed text-slate-600">{SITE.sampleNotice}</p>
           </div>
         </div>
-        <div aria-hidden="true" className="pointer-events-none relative mx-auto aspect-[3/1] w-full overflow-hidden min-[1200px]:absolute min-[1200px]:inset-0 min-[1200px]:-z-10 min-[1200px]:h-full min-[1200px]:aspect-auto">
+        <div aria-hidden="true" className="hero-art pointer-events-none absolute inset-x-0 top-0 -z-10 aspect-[3/1] overflow-hidden min-[1200px]:inset-0 min-[1200px]:aspect-auto">
           <Image
             src="/images/hero/cekobat-mint-blue-peach.webp"
             alt=""
