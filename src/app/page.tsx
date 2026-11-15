@@ -11,21 +11,21 @@ const POPULAR_QUERIES = ["demam", "batuk", "maag", "alergi", "luka", "diare"];
 export default function HomePage() {
   return (
     <>
-      <section aria-labelledby="hero-title" className="hero-surface relative isolate">
-        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-4 pt-8 sm:px-6 sm:pt-10 lg:py-16">
-          <div className="hero-copy mx-auto max-w-[600px] text-center">
-            <span className="hero-kicker mb-5 inline-flex items-center gap-2"><span aria-hidden="true">✦</span> Ruang informasi &amp; pengalaman obat</span>
-            <h1 id="hero-title" className="mx-auto max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
+      <section aria-labelledby="hero-title" className="hero-surface relative isolate min-[1200px]:grid min-[1200px]:min-h-[clamp(400px,33.333vw,560px)] min-[1200px]:items-center">
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-4 pt-8 sm:px-6 sm:pt-10 min-[1200px]:py-4">
+          <div className="hero-copy mx-auto max-w-[600px] text-center min-[1200px]:p-5!">
+            <span className="hero-kicker mb-3 inline-flex items-center gap-2"><span aria-hidden="true">✦</span> Ruang informasi &amp; pengalaman obat</span>
+            <h1 id="hero-title" className="mx-auto max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[38px]">
               {SITE.tagline}
             </h1>
-            <p className="mx-auto mt-4 max-w-lg leading-relaxed text-slate-600">
+            <p className="mx-auto mt-3 max-w-lg leading-relaxed text-slate-600">
               Cari obat, lihat review dan foto dari pengguna lain, lalu bagikan
               pengalaman Anda untuk membantu orang lain.
             </p>
-            <div className="hero-search mx-auto mt-7 max-w-xl text-left">
+            <div className="hero-search mx-auto mt-4 max-w-xl text-left">
               <SearchBar />
             </div>
-            <p className="mt-4 flex flex-wrap items-center justify-center gap-2 text-sm text-slate-600">
+            <p className="mt-3 flex flex-wrap items-center justify-center gap-2 text-sm text-slate-600">
               <span>Sering dicari:</span>
               {POPULAR_QUERIES.map((q) => (
                 <Link
@@ -37,10 +37,10 @@ export default function HomePage() {
                 </Link>
               ))}
             </p>
-            <p className="mx-auto mt-5 max-w-lg text-xs leading-relaxed text-slate-600">{SITE.sampleNotice}</p>
+            <p className="mx-auto mt-3 max-w-lg text-xs leading-relaxed text-slate-600">{SITE.sampleNotice}</p>
           </div>
         </div>
-        <div aria-hidden="true" className="pointer-events-none relative mx-auto aspect-[3/1] w-full overflow-hidden lg:absolute lg:inset-0 lg:-z-10 lg:h-full lg:aspect-auto">
+        <div aria-hidden="true" className="pointer-events-none relative mx-auto aspect-[3/1] w-full overflow-hidden min-[1200px]:absolute min-[1200px]:inset-0 min-[1200px]:-z-10 min-[1200px]:h-full min-[1200px]:aspect-auto">
           <Image
             src="/images/hero/cekobat-mint-blue-peach.webp"
             alt=""
@@ -48,7 +48,7 @@ export default function HomePage() {
             priority
             unoptimized
             sizes="100vw"
-            className="object-fill"
+            className="object-cover object-center"
           />
         </div>
       </section>
