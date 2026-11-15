@@ -105,10 +105,6 @@ export function ReviewReadingGate({ children }: { children: ReactNode }) {
             <p>Review menggambarkan pengalaman pribadi. Manfaat maupun efek samping yang dirasakan seseorang belum tentu sama dengan yang Anda alami.</p>
             <p><strong className="font-semibold text-slate-900">Gunakan review sebagai tambahan informasi, bukan pengganti saran dokter atau apoteker.</strong> Jangan memulai, menghentikan, atau mengubah pengobatan hanya berdasarkan ulasan. Diskusikan pertanyaan atau kekhawatiran Anda dengan tenaga kesehatan yang menangani Anda.</p>
           </div>
-          <div className="mt-5 rounded-xl border border-teal-100 bg-teal-50 px-4 py-3 text-sm leading-relaxed text-teal-900">
-            <span className="mb-1 block font-semibold">Tentang prototipe ini</span>
-            Review contoh pada prototipe ini adalah cerita fiktif untuk demonstrasi, bukan pengalaman pengguna sungguhan. Review yang Anda tulis sendiri disimpan di browser ini.
-          </div>
           <button type="button" onClick={dismissNotice} className="mt-6 min-h-12 w-full rounded-xl bg-teal-700 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800">
             Saya mengerti, lanjut membaca
           </button>
