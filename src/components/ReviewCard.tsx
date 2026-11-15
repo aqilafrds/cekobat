@@ -64,13 +64,13 @@ export function ReviewCard({
         )}
         <time
           dateTime={review.createdAt}
-          className="ml-auto text-xs text-slate-500"
+          className={compact ? "w-full pl-10 text-xs text-slate-500" : "ml-auto text-xs text-slate-500"}
         >
           {formatDate(review.createdAt)}
         </time>
       </header>
 
-      <div className="mt-2 flex items-center gap-2">
+      <div className={compact ? "mt-3 flex flex-col items-start gap-2" : "mt-2 flex flex-wrap items-center gap-2"}>
         <RatingStars value={review.rating} size={16} />
         <h3 className="font-semibold text-slate-900">{review.title}</h3>
       </div>

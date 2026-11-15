@@ -39,7 +39,7 @@ export function CategoryGrid() {
                 {c.description}
               </span>
             </span>
-            <span aria-hidden="true" className="category-arrow ml-auto hidden text-lg sm:block">↗</span>
+            <svg aria-hidden="true" className="category-arrow ml-auto hidden h-4 w-4 shrink-0 sm:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M6 18 18 6M6 6h12v12" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </Link>
         </li>
       ))}
