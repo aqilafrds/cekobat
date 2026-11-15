@@ -67,3 +67,9 @@ body {
  *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; }
  .category-card:hover, .product-card:hover { transform: none; }
 }
+
+/* Keep search copy readable over the more expressive pastel artwork. */
+.hero-surface { background: #fff5f1; }
+@media (min-width: 1024px) {
+ .hero-copy { border-radius: 28px; padding: 24px; background: #fffcf8ed; box-shadow: 0 12px 40px #7353970a; }
+}

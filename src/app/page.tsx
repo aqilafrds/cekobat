@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       <section aria-labelledby="hero-title" className="hero-surface relative isolate">
         <div className="relative z-10 mx-auto w-full max-w-5xl px-4 pb-4 pt-10 sm:px-6 sm:pt-14 lg:py-20">
-          <div className="lg:max-w-[56%]">
+          <div className="hero-copy lg:max-w-[56%]">
             <span className="hero-kicker mb-5 inline-flex items-center gap-2"><span aria-hidden="true">✦</span> Ruang informasi &amp; pengalaman obat</span>
             <h1 id="hero-title" className="max-w-xl text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[42px]">
               {SITE.tagline}
@@ -42,7 +42,7 @@ export default function HomePage() {
         </div>
         <div aria-hidden="true" className="pointer-events-none relative mx-auto h-52 w-full overflow-hidden sm:h-64 lg:absolute lg:inset-0 lg:-z-10 lg:h-full">
           <Image
-            src="/images/hero/cekobat-health-discovery-hq.webp"
+            src="/images/hero/cekobat-pastel-3d.webp"
             alt=""
             fill
             priority
