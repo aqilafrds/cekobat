@@ -6,6 +6,8 @@ function Dot({ classification }: { classification: Classification }) {
   const base =
     "inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[10px] font-bold leading-none text-white";
   switch (classification) {
+    case "suplemen":
+      return <span className="text-amber-700" aria-hidden="true">S</span>;
     case "bebas":
       return <span className={`${base} bg-green-600`} aria-hidden="true" />;
     case "bebas-terbatas":

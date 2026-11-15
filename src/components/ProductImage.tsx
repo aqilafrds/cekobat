@@ -1,3 +1,4 @@
+import { getProduct } from "@/data/products";
 import Image from "next/image";
 
 export function ProductImage({
@@ -11,6 +12,7 @@ export function ProductImage({
   className?: string;
   sizes?: string;
 }) {
+  const isAI = getProduct(slug)?.imageKind === "ai";
   return (
     <span
       data-product-image={slug}
@@ -18,11 +20,12 @@ export function ProductImage({
     >
       <Image
         src={`/images/produk/${slug}.webp`}
-        alt={`Ilustrasi kemasan ${name}`}
+        alt={`Ilustrasi ${isAI ? "AI " : ""}kemasan ${name}`}
         fill
         sizes={sizes}
         className="object-contain"
       />
+      {isAI && <span className="absolute inset-x-0 bottom-0 bg-white/95 py-0.5 text-center text-[10px] font-semibold text-teal-800">Ilustrasi AI</span>}
     </span>
   );
 }

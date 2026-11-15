@@ -40,6 +40,7 @@ export function ProductCard({
         <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
           <ClassBadge classification={product.classification} />
           <span className="text-xs text-slate-500">
+            {product.imageKind === "ai" && "Harga contoh: "}
             {formatRupiah(product.priceRange.min)} –{" "}
             {formatRupiah(product.priceRange.max)}
           </span>

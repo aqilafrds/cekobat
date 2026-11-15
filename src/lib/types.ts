@@ -1,9 +1,10 @@
-export type Classification = "bebas" | "bebas-terbatas" | "keras" | "tradisional";
+export type Classification = "bebas" | "bebas-terbatas" | "keras" | "tradisional" | "suplemen";
 
 export type DosageForm =
   | "tablet"
   | "kapsul"
   | "sirup"
+  | "krim"
   | "salep"
   | "tetes"
   | "larutan"
@@ -45,6 +46,8 @@ export interface Category {
 }
 
 export interface Product {
+  imageKind?: "ai";
+  sources?: { title: string; url: string }[];
   slug: string;
   name: string;
   genericName: string;

@@ -30,6 +30,10 @@ export function HomeSections() {
 
   return (
     <>
+      <section aria-labelledby="judul-baru" className="mx-auto w-full max-w-5xl px-4 pt-12 sm:px-6">
+        <div className="mb-5 flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow mb-2">Lebih banyak pilihan informasi</p><h2 id="judul-baru" className="text-2xl font-semibold tracking-tight">Baru di katalog</h2><p className="mt-1 text-sm text-slate-600">17 tambahan baru · {products.length} produk dalam 9 kategori. Kemasan baru adalah ilustrasi AI.</p></div><Link href="/cari" className="rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-teal-700 hover:border-teal-600">Lihat semua {products.length} produk</Link></div>
+        <ul className="grid gap-4 sm:grid-cols-2">{products.filter(p => p.imageKind === "ai").slice(0, 6).map(product => <li key={product.slug}><ProductCard product={product} stats={computeStats(reviews.filter(r => r.productSlug === product.slug))} /></li>)}</ul>
+      </section>
       <section
         aria-labelledby="judul-tren"
         className="mx-auto w-full max-w-5xl px-4 pt-12 sm:px-6"

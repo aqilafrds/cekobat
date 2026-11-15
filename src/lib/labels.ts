@@ -8,6 +8,7 @@ import type {
 } from "./types";
 
 export const CLASSIFICATION_LABEL: Record<Classification, string> = {
+  suplemen: "Suplemen Kesehatan",
   bebas: "Obat Bebas",
   "bebas-terbatas": "Obat Bebas Terbatas",
   keras: "Obat Keras",
@@ -15,6 +16,7 @@ export const CLASSIFICATION_LABEL: Record<Classification, string> = {
 };
 
 export const CLASSIFICATION_HINT: Record<Classification, string> = {
+  suplemen: "Bukan pengganti makanan bergizi atau terapi dokter",
   bebas: "Dapat dibeli tanpa resep",
   "bebas-terbatas": "Dapat dibeli tanpa resep, perhatikan peringatan di kemasan",
   keras: "Hanya dengan resep dokter",
@@ -25,7 +27,8 @@ export const FORM_LABEL: Record<DosageForm, string> = {
   tablet: "Tablet",
   kapsul: "Kapsul",
   sirup: "Sirup",
-  salep: "Salep/Krim",
+  krim: "Krim",
+  salep: "Salep",
   tetes: "Tetes",
   larutan: "Larutan",
   serbuk: "Serbuk",

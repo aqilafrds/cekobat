@@ -1,5 +1,7 @@
 import type { Product } from "@/lib/types";
 
+import { additionalProducts } from "./additional-products";
+
 const MAKER = "Produsen Contoh";
 const STORAGE_DRY =
   "Simpan di tempat sejuk dan kering, terlindung dari cahaya matahari langsung, jauh dari jangkauan anak-anak.";
@@ -277,6 +279,7 @@ export const products: Product[] = [
     targetUsers: ["dewasa", "lansia"],
     keywords: ["antibiotik", "infeksi", "radang tenggorokan", "bakteri", "resep"],
   },
+  ...additionalProducts,
 ];
 
 export function getProduct(slug: string): Product | undefined {

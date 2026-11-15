@@ -159,6 +159,7 @@ async function ProductContent({
         </div>
       </header>
 
+      {product.imageKind === "ai" && <Notice className="mt-6">Data demonstrasi. Gambar adalah ilustrasi AI kemasan fiktif, bukan foto produk terdaftar. CekObat bukan produsen obat. Harga hanya contoh; golongan mengikuti batas sediaan dan kemasan yang disebutkan. Periksa label produk terdaftar yang Anda gunakan.</Notice>}
       <Notice className="mt-6">{SITE.medicalDisclaimer}</Notice>
 
       <div className="mt-8 grid gap-8 md:grid-cols-3">
@@ -182,6 +183,7 @@ async function ProductContent({
             </ul>
           </InfoBlock>
           <InfoBlock title="Penyimpanan">{product.storage}</InfoBlock>
+          {product.sources && <InfoBlock title="Sumber informasi"><ul className="list-inside list-disc space-y-2">{product.sources.map(source => <li key={source.url}><a className="text-teal-700 underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.title} (tab baru)</a></li>)}</ul><p className="mt-2 text-xs">Ditinjau 15 November 2026. Rujukan menjelaskan bahan atau sediaan; bukan bukti izin edar kemasan ilustrasi ini. Ringkasan tidak mencakup seluruh interaksi dan efek samping.</p></InfoBlock>}
         </div>
 
         <aside className="h-fit rounded-xl border border-slate-200 bg-slate-50 p-5">
@@ -198,7 +200,7 @@ async function ProductContent({
               )}
             </Fact>
             <Fact label="Produsen">{product.manufacturer}</Fact>
-            <Fact label="Kisaran harga">{formatPriceRange(product.priceRange)}</Fact>
+            <Fact label={product.imageKind === "ai" ? "Kisaran harga contoh" : "Kisaran harga"}>{formatPriceRange(product.priceRange)}</Fact>
             <Fact label="Umumnya untuk">
               {product.targetUsers.map((u) => WHO_FOR_LABEL[u]).join(", ")}
             </Fact>
